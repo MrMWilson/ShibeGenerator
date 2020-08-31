@@ -3,6 +3,7 @@ window.onload = function () {
 }
 
 function GetShibeImg() {
+    debugger;
 
     var randomShibe = fetch('http://shibe.online/api/shibes', {
             method: 'GET'
@@ -11,12 +12,12 @@ function GetShibeImg() {
             response => response.json()
         )
         .then(
-            data => {
-                return data;
+            Images => {
+                return Images;
             }
         );
 
-    return randomShibe;
+    return randomShibe
 }
 
 async function DisplayShibe() {
