@@ -4,7 +4,7 @@ window.onload = function () {
 
 function GetShibeImg() {
 
-    var randomShibe = fetch('https://cdn.shibe.online/shibes/25274238a3ff550a072cb9c9f6898ee77fbc6c84.jpg' + Image, {
+    var randomShibe = fetch('https://cdn.shibe.online/shibes/', {
             method: 'GET'
         })
         .then(
@@ -18,4 +18,11 @@ function GetShibeImg() {
 
     return randomShibe;
 
+    async function DisplayShibe() {
+
+        var shibe = document.getElementById("randomShibe");
+        var getRandomShibe = await GetShibeImg();
+
+        shibe.contentEditable = getRandomShibe;
+    }
 }
