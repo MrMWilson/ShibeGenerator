@@ -5,15 +5,13 @@ window.onload = function () {
 function GetShibeImg() {
     debugger;
 
-    var randomShibe = fetch('http://shibe.online/api/shibes', {
-            method: 'GET'
-        })
+    var randomShibe = fetch('http://shibe.online/api/shibes')
         .then(
             response => response.json()
         )
         .then(
-            Images => {
-                return Images;
+            Data => {
+                return Data;
             }
         );
 
@@ -25,5 +23,5 @@ async function DisplayShibe() {
     var shibe = document.getElementById("randomShibe");
     var getRandomShibe = await GetShibeImg();
 
-    shibe.contentEditable = getRandomShibe;
+    shibe.src = getRandomShibe;
 }
