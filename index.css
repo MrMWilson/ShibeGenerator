@@ -1,9 +1,13 @@
 .images {
-    width: 500 px;
-    height: 500 px;
+    min-width: 500 px;
+    min-height: 500 px;
 
 }
 
 body {
     color: rgb(247, 214, 85);
+}
+
+.image.container.mt-5 {
+    min-height: 216 px;
 }
